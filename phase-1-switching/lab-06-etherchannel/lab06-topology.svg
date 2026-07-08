@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="460" viewBox="0 0 860 460" font-family="Helvetica, Arial, sans-serif">
+  <rect width="860" height="460" fill="#0f172a"/>
+  <text x="430" y="30" fill="#f1f5f9" font-size="16" font-weight="bold" text-anchor="middle">SomNet Solutions — EtherChannel (Lab 06)</text>
+
+  <rect x="140" y="90" width="200" height="80" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="240" y="120" fill="#e2e8f0" font-size="16" font-weight="bold" text-anchor="middle">HQ-SW1</text>
+  <text x="240" y="140" fill="#a78bfa" font-size="11" text-anchor="middle">ROOT BRIDGE</text>
+
+  <rect x="520" y="90" width="200" height="80" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="620" y="120" fill="#e2e8f0" font-size="16" font-weight="bold" text-anchor="middle">HQ-SW2</text>
+
+  <!-- bundled link: two thick parallel lines close together to represent single logical link -->
+  <line x1="340" y1="120" x2="520" y2="120" stroke="#22c55e" stroke-width="4"/>
+  <line x1="340" y1="132" x2="520" y2="132" stroke="#22c55e" stroke-width="4"/>
+  <text x="430" y="105" fill="#22c55e" font-size="13" font-weight="bold" text-anchor="middle">Port-channel 1 (Gi0/1 + Gi0/2, LACP)</text>
+  <text x="430" y="160" fill="#94a3b8" font-size="11" text-anchor="middle">Seen by STP as ONE logical link — no loop, no blocking</text>
+
+  <g>
+    <rect x="80" y="260" width="80" height="55" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="120" y="292" fill="#e2e8f0" font-size="12" text-anchor="middle">PC1 HR</text>
+  </g>
+  <g>
+    <rect x="180" y="260" width="80" height="55" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="220" y="292" fill="#e2e8f0" font-size="12" text-anchor="middle">PC2 HR</text>
+  </g>
+  <g>
+    <rect x="280" y="260" width="80" height="55" rx="6" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="320" y="292" fill="#e2e8f0" font-size="12" text-anchor="middle">PC3 Sales</text>
+  </g>
+
+  <g>
+    <rect x="600" y="260" width="80" height="55" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="640" y="292" fill="#e2e8f0" font-size="12" text-anchor="middle">PC5 HR</text>
+  </g>
+  <g>
+    <rect x="700" y="260" width="80" height="55" rx="6" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="740" y="292" fill="#e2e8f0" font-size="12" text-anchor="middle">PC6 Sales</text>
+  </g>
+
+  <line x1="120" y1="260" x2="200" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="220" y1="260" x2="220" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="320" y1="260" x2="250" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="640" y1="260" x2="600" y2="170" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="740" y1="260" x2="640" y2="170" stroke="#64748b" stroke-width="1.5"/>
+
+  <text x="430" y="390" fill="#64748b" font-size="12" text-anchor="middle">Both physical links now forward traffic at the same time — combined bandwidth, automatic failover if one fails</text>
+</svg>
