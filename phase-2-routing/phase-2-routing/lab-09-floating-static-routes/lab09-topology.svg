@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="480" fill="#0f172a"/>
+  <text x="500" y="28" fill="#f1f5f9" font-size="16" font-weight="bold" text-anchor="middle">SomNet Solutions — Redundant WAN with Floating Static Routes (Lab 09)</text>
+
+  <text x="230" y="55" fill="#64748b" font-size="12" text-anchor="middle">HQ Office</text>
+  <text x="770" y="55" fill="#64748b" font-size="12" text-anchor="middle">Branch Office</text>
+
+  <rect x="150" y="70" width="170" height="85" rx="8" fill="#1e293b" stroke="#facc15" stroke-width="2.5"/>
+  <text x="235" y="95" fill="#e2e8f0" font-size="14" font-weight="bold" text-anchor="middle">HQ-R1</text>
+  <text x="235" y="112" fill="#94a3b8" font-size="9" text-anchor="middle">Gi0/1: 192.168.100.1/30</text>
+  <text x="235" y="124" fill="#94a3b8" font-size="9" text-anchor="middle">Gi0/2: 192.168.101.1/30</text>
+  <text x="235" y="140" fill="#facc15" font-size="9" text-anchor="middle">Static (AD1) + Floating (AD5)</text>
+
+  <rect x="680" y="70" width="170" height="85" rx="8" fill="#1e293b" stroke="#facc15" stroke-width="2.5"/>
+  <text x="765" y="95" fill="#e2e8f0" font-size="14" font-weight="bold" text-anchor="middle">BRANCH-R1</text>
+  <text x="765" y="112" fill="#94a3b8" font-size="9" text-anchor="middle">Gi0/1: 192.168.100.2/30</text>
+  <text x="765" y="124" fill="#94a3b8" font-size="9" text-anchor="middle">Gi0/2: 192.168.101.2/30</text>
+  <text x="765" y="140" fill="#facc15" font-size="9" text-anchor="middle">Default (AD1) + Floating (AD5)</text>
+
+  <!-- Primary link -->
+  <line x1="320" y1="100" x2="680" y2="100" stroke="#22c55e" stroke-width="3.5"/>
+  <text x="500" y="90" fill="#22c55e" font-size="12" font-weight="bold" text-anchor="middle">PRIMARY LINK — 192.168.100.0/30 — ACTIVE</text>
+
+  <!-- Backup link -->
+  <line x1="320" y1="130" x2="680" y2="130" stroke="#f87171" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="500" y="150" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">BACKUP LINK — 192.168.101.0/30 — STANDBY (floating route)</text>
+
+  <!-- HQ-SW1/SW2 -->
+  <rect x="60" y="220" width="150" height="60" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="135" y="245" fill="#e2e8f0" font-size="12" font-weight="bold" text-anchor="middle">HQ-SW1</text>
+  <text x="135" y="260" fill="#94a3b8" font-size="9" text-anchor="middle">+ HQ-SW2 (Po1)</text>
+  <line x1="235" y1="155" x2="180" y2="220" stroke="#facc15" stroke-width="2"/>
+
+  <!-- Branch SW -->
+  <rect x="690" y="220" width="150" height="60" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="765" y="245" fill="#e2e8f0" font-size="12" font-weight="bold" text-anchor="middle">BRANCH-SW1</text>
+  <text x="765" y="260" fill="#94a3b8" font-size="9" text-anchor="middle">Vlan30, Vlan99</text>
+  <line x1="765" y1="155" x2="765" y2="220" stroke="#facc15" stroke-width="2"/>
+
+  <text x="500" y="340" fill="#64748b" font-size="12" text-anchor="middle">If the primary link (Gi0/1) fails, the AD-1 static route disappears from the table</text>
+  <text x="500" y="360" fill="#64748b" font-size="12" text-anchor="middle">The AD-5 floating static route via the backup link automatically takes over — no manual intervention</text>
+  <text x="500" y="390" fill="#64748b" font-size="12" text-anchor="middle">All existing HQ (VLAN 10/20) and Branch (VLAN 30) PCs and switches from Labs 01-08 remain unchanged</text>
+</svg>
